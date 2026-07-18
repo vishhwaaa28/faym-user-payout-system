@@ -1,23 +1,14 @@
 from fastapi import FastAPI
-from app.core.config import settings
-from app.models.user import User
-from app.models.brand import Brand
-from app.models.sale import Sale
-from app.core.database import Base, engine
-from app.models.user import User
-from app.models.brand import Brand
-from app.models.sale import Sale
-from app.models.payout import Payout
-from app.models.withdrawal import Withdrawal
-from app.models.payment_transaction import PaymentTransaction
 
-Base.metadata.create_all(bind=engine)
+from app.api.router import api_router
 
 app = FastAPI(
-    title=settings.APP_NAME,
-    version=settings.APP_VERSION,
+    title="Faym User Payout System",
     description="User Payout Management System",
+    version="1.0.0",
 )
+
+app.include_router(api_router)
 
 
 @app.get("/")
