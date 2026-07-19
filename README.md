@@ -5,7 +5,7 @@ A backend service built using **FastAPI**, **SQLAlchemy**, and **SQLite** to man
 > **GitHub Repository:**  
 > https://github.com/vishhwaaa28/faym-user-payout-system
 
-## 📚 Documentation
+## Documentation
 
 Detailed project documentation is available in the `docs/` directory.
 
